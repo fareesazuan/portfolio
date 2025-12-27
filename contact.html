@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Farees Azuan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Farees Azuan</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="services-preview" style="margin-top: 40px;">
+        <h1>Get In Touch</h1>
+        
+        <div style="max-width: 600px; margin: 40px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <form id="contact-form" onsubmit="handleSubmit(event)">
+                <div style="margin-bottom: 20px;">
+                    <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">Name</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label for="company" style="display: block; margin-bottom: 5px; font-weight: bold;">Company</label>
+                    <input type="text" id="company" name="company" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label for="service" style="display: block; margin-bottom: 5px; font-weight: bold;">Service Interested</label>
+                    <select id="service" name="service" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                        <option value="">-- Select --</option>
+                        <option value="vpn">VPN Deployment</option>
+                        <option value="audit">Network Security Audit</option>
+                        <option value="iam">Identity & Access Management</option>
+                        <option value="design">Network Design</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">Message</label>
+                    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+                </div>
+
+                <button type="submit" class="cta-btn" style="width: 100%;">Send Message</button>
+            </form>
+            
+            <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
+                <h3>Direct Contact</h3>
+                <p><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                <p><strong>WhatsApp/Telegram:</strong> +60 1X-XXXXXXX</p>
+                <p><strong>Location:</strong> Seri Kembangan, Selangor, Malaysia</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple success message (later: connect to Cloudflare Workers)
+            alert(`Thank you, ${name}! I'll get back to you soon.`);
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+
+    <footer class="footer">
+        <p>&copy; 2025 Farees Azuan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
